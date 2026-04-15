@@ -1,6 +1,6 @@
 # 🤖 Robot Framework Practice
 
-Test automation practice project using **Robot Framework + SeleniumLibrary** against [saucedemo.com](https://www.saucedemo.com).
+Test automation practice project using **Robot Framework + SeleniumLibrary** for [saucedemo.com](https://www.saucedemo.com).
 
 ---
 
