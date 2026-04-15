@@ -1,7 +1,12 @@
-🤖 Robot Framework Practice
-Test automation practice project using Robot Framework + SeleniumLibrary against saucedemo.com.
+# 🤖 Robot Framework Practice
 
-📁 Project Structure
+Test automation practice project using **Robot Framework + SeleniumLibrary** against [saucedemo.com](https://www.saucedemo.com).
+
+---
+
+## 📁 Project Structure
+
+```
 robot-framework-practice/
 │
 ├── README.md
@@ -9,20 +14,50 @@ robot-framework-practice/
 │
 └── tests/
     └── *.robot
+```
 
-⚙️ Setup
-bashpip install robotframework
+---
+
+## ⚙️ Setup
+
+```bash
+pip install robotframework
 pip install robotframework-seleniumlibrary
+```
 
-▶️ Running the tests
+---
+
+## ▶️ Running the tests
+
 Run all tests:
-bashrobot tests/
+```bash
+robot tests/
+```
+
 Run a specific file:
-bashrobot tests/login_test.robot
+```bash
+robot tests/login_test.robot
+```
 
-📊 Reports
+---
+
+## 📊 Reports
+
 After each run, Robot Framework automatically generates:
-FileDescriptionreport.htmlVisual summary of resultslog.htmlDetailed log of each keyword executedoutput.xmlRaw output for CI/CD integration
 
-👤 Saucedemo test users
-UsernamePasswordStatusstandard_usersecret_sauce✅ Normallocked_out_usersecret_sauce🔒 Blockedproblem_usersecret_sauce🐛 Visual bugsperformance_glitch_usersecret_sauce🐌 Slow on purpose
+| File | Description |
+|---|---|
+| `report.html` | Visual summary of results |
+| `log.html` | Detailed log of each keyword executed |
+| `output.xml` | Raw output for CI/CD integration |
+
+---
+
+## 👤 Saucedemo test users
+
+| Username | Password | Status |
+|---|---|---|
+| `standard_user` | `secret_sauce` | ✅ Normal |
+| `locked_out_user` | `secret_sauce` | 🔒 Blocked |
+| `problem_user` | `secret_sauce` | 🐛 Visual bugs |
+| `performance_glitch_user` | `secret_sauce` | 🐌 Slow on purpose |
