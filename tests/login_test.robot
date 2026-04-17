@@ -23,3 +23,24 @@ ${URL}      https://www.saucedemo.com/
     Click Button    id=login-button
     Wait Until Element Is Visible       class=error-button
     Close browser
+
+003- Login with empty credentials
+    Open browser        ${URL}      ${browser}
+    Input Text      id=user-name    ${EMPTY}
+    Click Button    id=login-button
+    Wait Until Element Is Visible       css=[data-test='error']
+    Element Should Contain      css=[data-test='error']      Epic sadface: Username is required
+    Input Text      id=user-name    standard_user
+    Input Text      id=password     ${EMPTY}
+    Click Button    id=login-button
+    Wait Until Element Is Visible       css=[data-test='error']
+    Element Should Contain      css=[data-test='error']      Epic sadface: Password is required
+    Close browser
+
+004- Login with locked user
+    Open browser        ${URL}      ${browser}
+    Input Text      id=user-name    locked_out_user
+    Input Text      id=password     secret_sauce
+    Click Button    id=login-button
+    Element Should Contain       css=[data-test="error"]     Epic sadface: Sorry, this user has been locked out.
+    Close browser
