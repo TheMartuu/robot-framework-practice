@@ -13,7 +13,7 @@ ${URL}      https://www.saucedemo.com/
     Input Text      id=user-name    standard_user
     Input Text      id=password     secret_sauce
     Click Button    id=login-button
-    Wait Until Element Is Visible       class=inventory_container
+    Page Should Contain Element       class=inventory_container
     Close browser
 
 002- Login with wrong credentials
@@ -43,4 +43,16 @@ ${URL}      https://www.saucedemo.com/
     Input Text      id=password     secret_sauce
     Click Button    id=login-button
     Element Should Contain       css=[data-test="error"]     Epic sadface: Sorry, this user has been locked out.
+    Close browser
+
+005- Logout test
+    Open browser        ${URL}      ${browser}
+    Input Text      id=user-name    standard_user
+    Input Text      id=password     secret_sauce
+    Click Button    id=login-button
+    Wait Until Element Is Visible       class=inventory_container
+    Click Button    id=react-burger-menu-btn
+    Wait Until Element Is Visible    id=logout_sidebar_link
+    Click Element    id=logout_sidebar_link
+    Page Should Contain Element    id=login-button
     Close browser
