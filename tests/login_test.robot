@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   Test Cases in Firefox
+Documentation   Log in test cases
 ...             by Martuu
 Library         SeleniumLibrary
 
