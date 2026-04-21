@@ -13,7 +13,10 @@ robot-framework-practice/
 ├── requirements.txt
 │
 └── tests/
-    └── *.robot
+    ├── inventory_test.robot
+    ├── login_test.robot
+    ├── performance_test.robot
+    └── workflow_test.robot
 ```
 
 ---
